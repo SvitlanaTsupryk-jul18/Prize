@@ -1,0 +1,100 @@
+.sending {
+  &__title {
+    font-family: $text-font;
+    font-size: 34px;
+    line-height: 76px;
+    text-align: center;
+  }
+
+  &__main {
+    @extend %container;
+  }
+
+  &__text {
+    width: 50%;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $main-font;
+  }
+  &__name {
+    display: inline-block;
+    padding: 10px 0 30px 0;
+  }
+  &__example {
+    background-image: url(../images/example.png);
+    background-size: cover;
+    width: 330px;
+    height: 250px;
+    display: flex;
+
+    &-text {
+      margin: auto;
+      font-size: 72px;
+      line-height: 84px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.3);
+      transform: rotate(39.68deg);
+    }
+  }
+  &__btn {
+    @extend %red-btn;
+    display: none;
+    margin: 20px 10%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sending {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sending {
+    &__main {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__text {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sending__title {
+    font-size: 24px;
+    line-height: 63px;
+  }
+}
+
+@media only screen and (max-width: 623px) {
+  .sending__h2 {
+    font-size: 24px;
+    line-height: 50px;
+  }
+  .sending .leaf:before {
+    bottom: -13%;
+  }
+  .sending .leaf-border {
+    padding: 1px;
+  }
+  .sending .leaf:after {
+    bottom: -13%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .sending {
+    &__example {
+      display: none;
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+}

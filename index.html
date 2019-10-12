@@ -134,8 +134,70 @@
             </div>
             <a class="sending__btn" href="#blank">ЗАПОВНИТИ БЛАНК</a>
         </section>
-        <section class="instructions"></section>
-        <section class="blank" id="blank">
+        <section class="instructions odd">
+            <h2 class="instructions__title">ІНСТРУКЦІЯ З ОДЕРЖАННЯ ВИГРАШУ</h2>
+        </section>
+        <section class="form" id="blank">
+            <div class="blank-wrapper">
+                <form name="blank" class="blank" action="handler.php">
+                    <h2 class="blank__title">Бланк на доставку виграшу</h2>
+                    <input type="checkbox" class="check" id="user" name="userName" value="userName" checked>
+                    <label for="user">Я, <span class="name">Name</span>, як Головний переможець Акції погоджуюсь
+                        отримати
+                        свій виграш – 317 000,00 гривень – готівкою.</label>
+                    <p class="blank__choose">Я очікую доставку грошового Призу:</p>
+                    <div class="blank__weeks">
+                        <p class="blank__radio"><input name="dzen" type="radio" value="first">Першого тижня виплат
+                            (01–05.05)
+                        </p>
+                        <p class="blank__radio"><input name="dzen" type="radio" value="second" checked>Другого тижня
+                            виплат
+                            (06–12.05)</p>
+                        <p class="blank__radio"><input name="dzen" type="radio" value="third"> Третього тижня виплат
+                            (13–19.05)</p>
+                        <p class="blank__radio"><input name="dzen" type="radio" value="third"> Четвертого тижня
+                            виплат
+                            (20–26.05)</p>
+                        <p class="blank__radio"><input name="dzen" type="radio" value="third"> П’ятого тижня виплат
+                            (27.05–31.05).</p>
+                    </div>
+                    <div class="blank__inputs">
+                        <div class="blank__data">
+                            <p>В зручний для мене день тижня:</p>
+                            <select class="blank__input blank__select" name="weekDay">
+                                <option value="monday">Понедельник</option>
+                                <option value="tuesday">Вторник</option>
+                                <option value="wensday">Среда</option>
+                                <option value="thurday">Четверг</option>
+                                <option value="friday">Пятница</option>
+                                <option value="saturday" selected>Суббота</option>
+                                <option value="sunday">Воскресенье</option>
+                            </select>
+                        </div>
+                        <div class="blank__data">
+                            <p>Номер телефону для зв’язку з Вами та уточнення адреси доставки:</p>
+                            <input class="blank__input" type="tel" placeholder="+38 011 222 333 44">
+                        </div>
+                        <div class="blank__data">
+                            <p>Адреса доставки:</p>
+                            <input class="blank__input" type="text" required maxlength="1000"
+                                placeholder="Область/Район/Населений пункт/Вулиця/Номер будинку/Номер квартири ">
+                        </div>
+                    </div>
+                    <p class="blank__mark">
+                        <input type="checkbox" class="check check--bordered" id="reject" name="reject" value="reject">
+                        <label for="reject" class="grey">Я відмовляюсь від БЕЗКОШТОВНОЇ доставки мені виграшу. Прошу
+                            вислати
+                            мені 317
+                            000,00 гривень поштовим переказом.</label>
+                    </p>
+                    <p class="blank__mark">
+                        <input type="checkbox" class="check check--bordered" id="adree" name="adree" value="adree"
+                            checked>
+                        <label for="agree">Я заповнюю цей документ і роблю обов’язкове замовлення товарів.</label>
+                    </p>
+                </form>
+            </div>
         </section>
         <footer class="footer">
         </footer>
