@@ -1,0 +1,382 @@
+.hero {
+    padding-left: 12%;
+    color: white;
+    height: 100vh;
+
+    &__main {
+        position: relative;
+    }
+
+    &__left {
+        width: 435px;
+        float: left;
+    }
+
+    &__h2 {
+        font-family: $text-font;
+        font-size: 40px;
+        line-height: 50px;
+        font-style: normal;
+        font-weight: normal;
+        padding-bottom: 20px;
+        width: 440px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 20px 0;
+        width: 430px;
+        border-top: 11px solid $main-color;
+    }
+
+    &__btn {
+        @extend %red-btn;
+        box-shadow: 0px 0px 15px #DD9E23;
+        width: 318px;
+        margin-top: 30px;
+    }
+
+    &__bottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 40px;
+
+        &-text {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            opacity: 1;
+        }
+
+        &-sign {
+            display: inline-block;
+        }
+    }
+}
+
+.logo {
+    padding: 32px 0 52px 0;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        animation: tada 1s 1;
+    }
+}
+
+@-webkit-keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        padding-left: 5%;
+
+        &__bottom {
+            padding: 10px;
+        }
+
+        &__btn {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        &__h2 {
+            width: 100%;
+            font-size: 32px;
+        }
+
+        &__text {
+            width: 55%;
+            font-size: 18px;
+        }
+
+    }
+
+    .logo {
+        padding: 30px 0;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .logo {
+        padding: 10px 0;
+    }
+
+    .hero {
+        &__h2 {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 14px;
+            border-top: 5px solid $main-color;
+        }
+
+        &__btn {
+            width: 55%;
+            text-align: center;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 470px) and(min-width: 320px) {
+    .hero {
+        &__bottom-sign {
+            order: -1;
+            width: 55px;
+        }
+
+        &__bottom-text {
+            font-size: 7px;
+        }
+
+        &__btn {
+            font-size: 12px;
+            font-style: normal;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// .sctitle {
+//     text-transform: uppercase;
+//     font-family: $main-font;
+//     font-size: 20px;
+//     text-align: center;
+//     position: relative;
+//     padding-bottom: 60px;
+
+//     &:before {
+//         position: absolute;
+//         content: " ";
+//         top: 50px;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         text-align: center;
+//         width: 50px;
+//         height: 2px;
+//         background-color: $text-color;
+//     }
+// }
+
+// .undertitle {
+//     font-size: 16px;
+//     text-align: center;
+//     margin-bottom: 70px;
+// }
+
+// .preloader {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 3;
+//     background-color: $img-color;
+//     text-align: center;
+//     color: #fff;
+//     font-size: 30px;
+//     padding: 20%;
+//     transition: 1s all;
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+// .loader {
+//     width: 90px;
+//     height: 90px;
+//     border: 10px solid white;
+//     border-radius: 50%;
+//     border-top-color: #c0301c;
+//     line-height: 60px;
+//     color: white;
+//     padding: 5px;
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     animation: spin 1s infinite;
+// }
+
+// .done {
+//     opacity: 0;
+//     visibility: hidden;
+// }
+
+// #left,
+// #right {
+//     display: inline-block;
+// }
+
+// @keyframes spin {
+//     from {
+//         transform: translate(-50%, -50%) rotate(0deg);
+//     }
+
+//     to {
+//         transform: translate(-50%, -50%) rotate(360deg);
+//     }
+// }
+
+// @media only screen and (max-width: 768px) {
+//     %sec-padding {
+//         padding: 50px 0;
+//     }
+
+//     body {
+//         padding-bottom: 195px;
+//     }
+// }
+
+// @media only screen and (max-width: 576px) {
+//     .undertitle {
+//         margin-bottom: 20px;
+//     }
+// }
+
+// @media only screen and (max-width: 470px) and(min-width: 320px) {
+//     %sec-padding {
+//         padding: 20px 0;
+//     }
+
+//     body {
+//         padding-bottom: 135px;
+//     }
+
+//     .sctitle {
+//         padding-bottom: 30px;
+
+//         &:before {
+//             top: 30px;
+//         }
+//     }
+// }
+
+// @keyframes rubberBand {
+//     from {
+//         -webkit-transform: scale3d(1, 1, 1);
+//         transform: scale3d(1, 1, 1);
+//     }
+
+//     30% {
+//         -webkit-transform: scale3d(1.25, 0.75, 1);
+//         transform: scale3d(1.25, 0.75, 1);
+//     }
+
+//     40% {
+//         -webkit-transform: scale3d(0.75, 1.25, 1);
+//         transform: scale3d(0.75, 1.25, 1);
+//     }
+
+//     50% {
+//         -webkit-transform: scale3d(1.15, 0.85, 1);
+//         transform: scale3d(1.15, 0.85, 1);
+//     }
+
+//     65% {
+//         -webkit-transform: scale3d(0.95, 1.05, 1);
+//         transform: scale3d(0.95, 1.05, 1);
+//     }
+
+//     75% {
+//         -webkit-transform: scale3d(1.05, 0.95, 1);
+//         transform: scale3d(1.05, 0.95, 1);
+//     }
+
+//     to {
+//         -webkit-transform: scale3d(1, 1, 1);
+//         transform: scale3d(1, 1, 1);
+//     }
+// }
+
+// .rubberBand {
+//     -webkit-animation-name: rubberBand;
+//     animation-name: rubberBand;
+// }
