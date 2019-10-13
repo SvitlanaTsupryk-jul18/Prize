@@ -13,6 +13,14 @@
   .red {
     text-transform: lowercase;
   }
+  &__warning {
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.3em;
+    text-align: left;
+    opacity: 0.3;
+    padding-bottom: 10px;
+  }
 }
 
 .product__img {
@@ -20,8 +28,13 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .products__text {
-    font-size: 18px;
-    line-height: 25px;
+  .products {
+    &__text {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    &__warning {
+      display: none;
+    }
   }
 }
