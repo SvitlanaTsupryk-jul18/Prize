@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.hero__btn, .diplom__download, .sending__btn {
+.hero__btn, .diplom__download, .sending__btn, .blank__btn {
   display: block;
   padding: 28px 22px;
   background-color: #a70b0b;
@@ -10,7 +10,7 @@
   cursor: pointer;
   text-align: center;
   transition: all 0.5s; }
-  .hero__btn:hover, .diplom__download:hover, .sending__btn:hover {
+  .hero__btn:hover, .diplom__download:hover, .sending__btn:hover, .blank__btn:hover {
     animation: shake 1.5s 1; }
 
 .leaf-border {
@@ -26,7 +26,7 @@
   height: 100%;
   transform: scale(1.5); }
 
-.diplom__main, .sending__main, .form, .instructions__inner {
+.diplom__main, .sending__main, .form, .instructions__inner, .products {
   padding: 20px 12%;
   display: flex;
   justify-content: space-between; }
@@ -125,7 +125,7 @@ body {
     right: -77px; } }
 
 @media only screen and (max-width: 900px) {
-  .diplom__main, .sending__main, .form, .instructions__inner {
+  .diplom__main, .sending__main, .form, .instructions__inner, .products {
     padding: 20px 5%; } }
 
 @media only screen and (max-width: 576px) {
@@ -692,10 +692,12 @@ img {
   border: 5px solid #dbab00;
   padding: 25px 9%;
   font-size: 18px;
-  line-height: 23px; }
+  line-height: 23px;
+  text-align: left; }
   .blank-wrapper {
     padding: 20px 25px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    text-align: center; }
   .blank__title {
     font-size: 40px;
     font-weight: bold;
@@ -734,11 +736,18 @@ img {
       width: 100%; }
   .blank__mark {
     margin-bottom: 15px; }
+    .blank__mark label {
+      display: inline-block;
+      width: 90%; }
   .blank__select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     color: rgba(0, 0, 0, 0.5); }
+  .blank__btn {
+    display: inline-block;
+    padding: 24px 75px;
+    margin: 30px auto; }
 
 input[type="radio"] {
   -webkit-appearance: none;
@@ -787,6 +796,10 @@ input[type="radio"]:checked {
   .blank {
     padding: 25px 5%; } }
 
+@media only screen and (max-width: 850px) {
+  .blank__mark {
+    display: flex; } }
+
 @media only screen and (max-width: 700px) {
   .blank__data {
     width: 98%; } }
@@ -803,14 +816,20 @@ input[type="radio"]:checked {
       font-size: 14px; }
       .blank__mark .grey {
         font-size: 12px; }
+      .blank__mark label {
+        width: 100%; }
     .blank-wrapper {
       padding: 0; }
     .blank__radio {
       padding: 0; }
     .blank__input {
       padding: 12px 18px; }
+    .blank__btn {
+      width: 90%; }
   .form {
-    padding: 0; } }
+    padding: 0; }
+  .check--bordered {
+    margin-right: 15px; } }
 
 .instructions {
   color: white; }
@@ -929,4 +948,26 @@ input[type="radio"]:checked {
     .list__item p {
       padding-left: 25%; }
   .instructions__banner {
-    top: 55%; } }
+    top: 55%;
+    margin: 0 -15px; } }
+
+.products {
+  display: block;
+  text-align: center; }
+  .products__text {
+    font-family: "Vollkorn", serif;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold; }
+  .products .red {
+    text-transform: lowercase; }
+
+.product__img {
+  max-width: 100%; }
+
+@media only screen and (max-width: 576px) {
+  .products__text {
+    font-size: 18px;
+    line-height: 25px; } }
