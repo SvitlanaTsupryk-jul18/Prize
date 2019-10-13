@@ -1,0 +1,159 @@
+.instructions {
+  color: white;
+
+  &__inner {
+    @extend %container;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__title {
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-family: $text-font;
+    text-align: center;
+    display: block;
+    border-bottom: 11px solid $main-color;
+  }
+  &__text {
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    padding: 25px;
+  }
+  &__banner {
+    background-color: #f5e586;
+    color: #ff0000;
+    margin: 0;
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+
+.list {
+  list-style: none;
+  counter-reset: item;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__item {
+    display: inline-block;
+    padding-right: 35px;
+    position: relative;
+    width: 25%;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:not(:first-child) {
+      &:after {
+        position: absolute;
+        content: url(../images/icons/Vector2.png);
+        top: 20%;
+        left: -30%;
+      }
+    }
+    p {
+      position: relative;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    & p::before {
+      position: absolute;
+      left: -30px;
+      top: 10px;
+      display: inline-block;
+      content: counter(item) " ";
+      counter-increment: item;
+      font-weight: bold;
+      font-size: 40px;
+      color: $main-color;
+    }
+  }
+  &__icon {
+    display: block;
+    margin: 25px auto;
+    &--bordered {
+      padding-bottom: 5px;
+      border-bottom: 3px solid #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list {
+    flex-wrap: wrap;
+    &__item {
+      width: 50%;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .instructions {
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 5px;
+      border-bottom: 5px solid $main-color;
+    }
+    &__text {
+      font-size: 11px;
+      line-height: 12px;
+      border: 1px solid #dd9e23;
+      margin: 15px;
+      position: absolute;
+      top: 50%;
+    }
+    &__banner {
+      font-size: 24px;
+      line-height: 27px;
+    }
+  }
+  .list {
+    padding-top: 30px;
+    &__item {
+      width: 100%;
+      &:last-child {
+        padding-top: 25%;
+      }
+      p {
+        padding-left: 15%;
+        &:before {
+          position: static;
+          display: inline-block;
+          content: counter(item) ".";
+          counter-increment: item;
+          font-weight: bold;
+          font-size: 14px;
+          color: white;
+        }
+      }
+    }
+    &__icon {
+      display: block;
+      float: left;
+    }
+  }
+  .banner {
+    border: 5px solid $main-color;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .list__item {
+    padding-bottom: 10px;
+    &:last-child {
+      padding-top: 50%;
+    }
+    p {
+      padding-left: 25%;
+    }
+  }
+  .instructions__banner {
+    top: 55%;
+  }
+}

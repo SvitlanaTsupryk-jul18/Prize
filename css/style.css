@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .hero__btn, .diplom__download, .sending__btn {
   display: block;
   padding: 28px 22px;
@@ -25,7 +26,7 @@
   height: 100%;
   transform: scale(1.5); }
 
-.diplom__main, .sending__main {
+.diplom__main, .sending__main, .form, .instructions__inner {
   padding: 20px 12%;
   display: flex;
   justify-content: space-between; }
@@ -124,7 +125,7 @@ body {
     right: -77px; } }
 
 @media only screen and (max-width: 900px) {
-  .diplom__main, .sending__main {
+  .diplom__main, .sending__main, .form, .instructions__inner {
     padding: 20px 5%; } }
 
 @media only screen and (max-width: 576px) {
@@ -686,3 +687,246 @@ img {
     display: none; }
   .sending__btn {
     display: block; } }
+
+.blank {
+  border: 5px solid #dbab00;
+  padding: 25px 9%;
+  font-size: 18px;
+  line-height: 23px; }
+  .blank-wrapper {
+    padding: 20px 25px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
+  .blank__title {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 46px;
+    margin-bottom: 25px; }
+  .blank__choose {
+    padding-top: 25px; }
+  .blank__weeks {
+    display: flex;
+    flex-wrap: wrap; }
+  .blank__radio {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 10px; }
+  .blank__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between; }
+  .blank__input {
+    font-size: 14px;
+    line-height: 23px;
+    padding: 15px 30px;
+    border: 2px solid #e2c765;
+    width: 100%;
+    margin: 7px 0 16px 0; }
+  .blank__data {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .blank__data:last-child {
+      width: 100%; }
+  .blank__mark {
+    margin-bottom: 15px; }
+  .blank__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: rgba(0, 0, 0, 0.5); }
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  padding: 3px;
+  background-clip: content-box;
+  border: 2px solid #e2c765;
+  outline: none;
+  border-radius: 50%;
+  margin-right: 10px; }
+
+input[type="radio"]:checked {
+  background-color: #a70b0b; }
+
+.check {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  outline: none; }
+  .check--bordered {
+    border: 2px solid #e2c765;
+    display: inline-block;
+    margin-right: 37px; }
+
+.check::before {
+  content: "✔";
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  color: #a70b0b;
+  font-size: 1.3rem;
+  display: none; }
+
+.check:checked::before {
+  display: block; }
+
+.grey {
+  color: rgba(0, 0, 0, 0.5); }
+
+@media only screen and (max-width: 1000px) {
+  .blank {
+    padding: 25px 5%; } }
+
+@media only screen and (max-width: 700px) {
+  .blank__data {
+    width: 98%; } }
+
+@media only screen and (max-width: 576px) {
+  .blank {
+    background: #fffceb;
+    font-size: 16px; }
+    .blank__title {
+      font-size: 22px; }
+    .blank__radio {
+      font-size: 14px; }
+    .blank__mark {
+      font-size: 14px; }
+      .blank__mark .grey {
+        font-size: 12px; }
+    .blank-wrapper {
+      padding: 0; }
+    .blank__radio {
+      padding: 0; }
+    .blank__input {
+      padding: 12px 18px; }
+  .form {
+    padding: 0; } }
+
+.instructions {
+  color: white; }
+  .instructions__inner {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  .instructions__title {
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-family: "Vollkorn", serif;
+    text-align: center;
+    display: block;
+    border-bottom: 11px solid #dbab00; }
+  .instructions__text {
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    padding: 25px; }
+  .instructions__banner {
+    background-color: #f5e586;
+    color: #ff0000;
+    margin: 0;
+    font-size: 40px;
+    line-height: 45px; }
+
+.list {
+  list-style: none;
+  counter-reset: item;
+  display: flex;
+  justify-content: space-evenly; }
+  .list__item {
+    display: inline-block;
+    padding-right: 35px;
+    position: relative;
+    width: 25%; }
+    .list__item:last-child {
+      padding-right: 0; }
+    .list__item:not(:first-child):after {
+      position: absolute;
+      content: url(../images/icons/Vector2.png);
+      top: 20%;
+      left: -30%; }
+    .list__item p {
+      position: relative;
+      font-size: 14px;
+      line-height: 16px; }
+    .list__item p::before {
+      position: absolute;
+      left: -30px;
+      top: 10px;
+      display: inline-block;
+      content: counter(item) " ";
+      counter-increment: item;
+      font-weight: bold;
+      font-size: 40px;
+      color: #dbab00; }
+  .list__icon {
+    display: block;
+    margin: 25px auto; }
+    .list__icon--bordered {
+      padding-bottom: 5px;
+      border-bottom: 3px solid #ffffff; }
+
+@media only screen and (max-width: 768px) {
+  .list {
+    flex-wrap: wrap; }
+    .list__item {
+      width: 50%; }
+      .list__item:after {
+        display: none; } }
+
+@media only screen and (max-width: 576px) {
+  .instructions__title {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    border-bottom: 5px solid #dbab00; }
+  .instructions__text {
+    font-size: 11px;
+    line-height: 12px;
+    border: 1px solid #dd9e23;
+    margin: 15px;
+    position: absolute;
+    top: 50%; }
+  .instructions__banner {
+    font-size: 24px;
+    line-height: 27px; }
+  .list {
+    padding-top: 30px; }
+    .list__item {
+      width: 100%; }
+      .list__item:last-child {
+        padding-top: 25%; }
+      .list__item p {
+        padding-left: 15%; }
+        .list__item p:before {
+          position: static;
+          display: inline-block;
+          content: counter(item) ".";
+          counter-increment: item;
+          font-weight: bold;
+          font-size: 14px;
+          color: white; }
+    .list__icon {
+      display: block;
+      float: left; }
+  .banner {
+    border: 5px solid #dbab00; } }
+
+@media only screen and (max-width: 475px) {
+  .list__item {
+    padding-bottom: 10px; }
+    .list__item:last-child {
+      padding-top: 50%; }
+    .list__item p {
+      padding-left: 25%; }
+  .instructions__banner {
+    top: 55%; } }
