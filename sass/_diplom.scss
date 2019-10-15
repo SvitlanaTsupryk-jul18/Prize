@@ -43,7 +43,8 @@
   }
 
   &__main {
-    @extend %container;
+    display: flex;
+    justify-content: space-between;
     position: relative;
   }
 
@@ -151,7 +152,6 @@
   font-size: 30px;
   color: $red-color;
   border: 11px solid #dbab00;
-  margin: 30px 12%;
   text-align: center;
   font-weight: bold;
   font-family: $text-font;
@@ -314,7 +314,7 @@ img {
     }
 
     &__context {
-      padding-left: 40px;
+      padding: 0;
     }
 
     &__right {

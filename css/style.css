@@ -26,10 +26,9 @@
   height: 100%;
   transform: scale(1.5); }
 
-.diplom__main, .sending__main, .form, .instructions__inner, .products {
-  padding: 20px 12%;
-  display: flex;
-  justify-content: space-between; }
+.container {
+  max-width: 889px;
+  margin: 20px auto; }
 
 * {
   box-sizing: border-box;
@@ -60,7 +59,7 @@ body {
     height: 638px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0px 4px 250px rgba(255, 216, 180, 0.35); }
+    box-shadow: 0px 4px 250px 4px rgba(255, 216, 180, 0.35); }
   .odd .bg-image {
     position: absolute;
     right: 30px;
@@ -125,8 +124,8 @@ body {
     right: -77px; } }
 
 @media only screen and (max-width: 900px) {
-  .diplom__main, .sending__main, .form, .instructions__inner, .products {
-    padding: 20px 5%; } }
+  .container {
+    margin: 20px 5%; } }
 
 @media only screen and (max-width: 576px) {
   .odd::before {
@@ -134,7 +133,8 @@ body {
     left: 45px;
     top: -20px; }
   .odd .bg-image {
-    width: 251px; }
+    width: 80%;
+    right: -20%; }
   .leaf-border {
     display: block;
     border-bottom: 5px solid #dbab00; } }
@@ -143,14 +143,7 @@ body {
   .shadow-text {
     font-size: 5px; } }
 
-.blank {
-  padding: 20px 12%;
-  margin: 0 auto; }
-  .blank__img {
-    width: 100%; }
-
 .hero {
-  padding-left: 12%;
   color: white;
   height: 100vh; }
   .hero__main {
@@ -173,7 +166,7 @@ body {
     width: 430px;
     border-top: 11px solid #dbab00; }
   .hero__btn {
-    box-shadow: 0px 0px 15px #DD9E23;
+    box-shadow: 0px 0px 15px #dd9e23;
     width: 318px;
     margin-top: 30px; }
   .hero__bottom {
@@ -196,7 +189,7 @@ body {
 
 .logo {
   padding: 32px 0 52px 0;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer; }
   .logo:hover {
     animation: tada 1s 1; }
@@ -248,12 +241,10 @@ body {
     transform: scale3d(1, 1, 1); } }
 
 @media only screen and (max-width: 1000px) {
-  .hero {
-    padding-left: 5%; }
-    .hero__bottom {
-      padding: 10px; }
-    .hero__btn {
-      margin: 0; } }
+  .hero__bottom {
+    padding: 10px; }
+  .hero__btn {
+    margin: 0; } }
 
 @media only screen and (max-width: 768px) {
   .hero__h2 {
@@ -320,6 +311,8 @@ body {
   font-size: 30px; }
 
 .diplom__main {
+  display: flex;
+  justify-content: space-between;
   position: relative; }
 
 .diplom__context {
@@ -401,7 +394,6 @@ body {
   font-size: 30px;
   color: #a70b0b;
   border: 11px solid #dbab00;
-  margin: 30px 12%;
   text-align: center;
   font-weight: bold;
   font-family: "Vollkorn", serif;
@@ -506,7 +498,7 @@ img {
   .diplom__main {
     flex-wrap: wrap; }
   .diplom__context {
-    padding-left: 40px; }
+    padding: 0; }
   .diplom__right {
     margin: 0 auto;
     padding-top: 20px; }
@@ -569,7 +561,7 @@ img {
 .delivery {
   color: white;
   height: 100vh;
-  padding: 70px 12%; }
+  padding-top: 30px; }
   .delivery__h2, .delivery__h3 {
     font-family: "Vollkorn", serif;
     font-size: 30px;
@@ -582,7 +574,7 @@ img {
     width: 435px;
     margin: 0 auto;
     font-weight: bold;
-    color: #FFE484;
+    color: #ffe484;
     text-shadow: 0px 0px 30px #dbab00;
     border-bottom: 11px solid #dbab00; }
   .delivery__text {
@@ -595,17 +587,15 @@ img {
 
 @media only screen and (max-width: 768px) {
   .delivery {
-    padding: 50px; }
+    height: 631px; }
     .delivery__text {
       font-size: 18px; }
       .delivery__text:first-of-type {
         padding-top: 10px; } }
 
 @media only screen and (max-width: 576px) {
-  .delivery {
-    padding: 50px 20px; }
-    .delivery__text {
-      font-size: 16px; } }
+  .delivery __text {
+    font-size: 16px; } }
 
 @media only screen and (max-width: 490px) and (min-width: 320px) {
   .delivery__h2, .delivery__h3 {
@@ -625,6 +615,10 @@ img {
   font-size: 34px;
   line-height: 76px;
   text-align: center; }
+
+.sending__main {
+  display: flex;
+  justify-content: space-between; }
 
 .sending__text {
   width: 50%;
@@ -900,7 +894,9 @@ input[type="radio"]:checked {
     .list__item {
       width: 50%; }
       .list__item:after {
-        display: none; } }
+        display: none; }
+  .instructions__inner {
+    padding: 0; } }
 
 @media only screen and (max-width: 576px) {
   .instructions__title {
