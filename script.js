@@ -4,7 +4,7 @@
   askName();
   smoothScrollLinks();
   scalingDiplom();
-  showSlides();
+  initSlider();
 
   ///asking user of his name
 
@@ -37,25 +37,27 @@
     });
   }
 
-  ///show adding to diplom at click
+  ///show adding to diplom оn click
 
-  function showSlides() {
-    let initSlider = document.querySelector(".slider");
-    let slider = document.querySelector(".slideshow-container");
-    let slides = [...slider.querySelectorAll(".mySlides")];
+  function initSlider() {
+    let showSliderEl = document.querySelector(".slider");
+    let slider = document.querySelector(".slides-container");
+    let slides = [...slider.querySelectorAll(".slides")];
 
-    initSlider.addEventListener("click", function() {
+    let timerId = null;
+
+    showSliderEl.addEventListener("click", function() {
       slider.classList.remove("hide");
-      let timerId = setInterval(showAuto, 3000);
-
-      slider.addEventListener("click", () => {
-        slider.classList.add("hide");
-        clearInterval(timerId);
-      });
+      timerId = setInterval(changeSlide, 3000);
     });
 
-    function showAuto() {
+    function changeSlide() {
       slides.forEach(slide => slide.classList.toggle("showSlide"));
     }
+
+    slider.addEventListener("click", () => {
+      slider.classList.add("hide");
+      clearInterval(timerId);
+    });
   }
 })();

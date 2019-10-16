@@ -300,79 +300,64 @@ body {
   padding-bottom: 13px;
   border-radius: 10px; }
 
-.diplom__title {
-  font-family: "Vollkorn", serif;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  font-weight: bold; }
-
-.diplom__h2 {
-  font-size: 30px; }
-
-.diplom__main {
-  display: flex;
-  justify-content: space-between;
+.diplom {
   position: relative; }
-
-.diplom__context {
-  padding-right: 40px; }
-
-.diplom__right {
-  width: 276px; }
-
-.diplom__img {
-  background-image: url(../images/Diplom.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 197px;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease-in; }
-  .diplom__img:hover .diplom__scale {
-    transform: scale(1); }
-
-.diplom__scale {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transition: all 0.3s ease-in;
-  transform: scale(0.01);
-  color: grey; }
-
-.diplom__name {
-  position: absolute;
-  top: 55%;
-  left: 42%;
-  color: #d90000;
-  font-size: 10px; }
-
-.diplom__h3 {
-  font-size: 22px;
-  padding-bottom: 30px; }
-
-.diplom__text {
-  font-size: 17px;
-  line-height: 26px;
-  padding-bottom: 30px; }
-  .diplom__text:last-of-type {
-    padding-bottom: 0; }
-
-.diplom__quote {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 26px;
-  padding: 20px 55px;
-  background: rgba(242, 214, 116, 0.58);
-  margin-bottom: 30px; }
-
-.diplom__slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; }
+  .diplom__title {
+    font-family: "Vollkorn", serif;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold; }
+  .diplom__h2 {
+    font-size: 30px; }
+  .diplom__main {
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+  .diplom__context {
+    padding-right: 40px; }
+  .diplom__right {
+    width: 276px; }
+  .diplom__img {
+    background-image: url(../images/Diplom.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 197px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in; }
+    .diplom__img:hover .diplom__scale {
+      transform: scale(1); }
+  .diplom__scale {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transition: all 0.3s ease-in;
+    transform: scale(0.01);
+    color: grey; }
+  .diplom__name {
+    position: absolute;
+    top: 55%;
+    left: 42%;
+    color: #d90000;
+    font-size: 10px; }
+  .diplom__h3 {
+    font-size: 22px;
+    padding-bottom: 30px; }
+  .diplom__text {
+    font-size: 17px;
+    line-height: 26px;
+    padding-bottom: 30px; }
+    .diplom__text:last-of-type {
+      padding-bottom: 0; }
+  .diplom__quote {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    padding: 20px 55px;
+    background: rgba(242, 214, 116, 0.58);
+    margin-bottom: 30px; }
 
 .hide {
   display: none; }
@@ -406,19 +391,24 @@ body {
   transform: scale(2.5);
   transform-origin: right; }
 
-.mySlides {
+.slides {
+  max-width: 70%;
+  margin: 20% auto;
   display: none; }
-  .mySlides img {
+  .slides img {
     width: 100%; }
 
 img {
   vertical-align: middle; }
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 70%;
-  position: relative;
-  margin: auto; }
+.slides-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .showSlide {
   display: block; }

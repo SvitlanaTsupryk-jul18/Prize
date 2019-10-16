@@ -30,6 +30,7 @@
 }
 
 .diplom {
+  position: relative;
   &__title {
     font-family: $text-font;
     font-size: 30px;
@@ -115,14 +116,6 @@
     background: rgba(242, 214, 116, 0.58);
     margin-bottom: 30px;
   }
-
-  &__slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
 }
 
 .hide {
@@ -168,7 +161,9 @@
   transform-origin: right;
 }
 
-.mySlides {
+.slides {
+  max-width: 70%;
+  margin: 20% auto;
   display: none;
 
   img {
@@ -181,10 +176,13 @@ img {
 }
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 70%;
-  position: relative;
-  margin: auto;
+.slides-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .showSlide {
