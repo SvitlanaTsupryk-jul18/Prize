@@ -157,7 +157,7 @@
 }
 
 .scaled {
-  transform: scale(2.5);
+  transform: scale(2.5) translateX(-20%);
   transform-origin: right;
 }
 
@@ -257,6 +257,9 @@ img {
       font-size: 24px;
     }
   }
+  .scaled {
+    transform: scale(2.5) translateX(-10%);
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -283,6 +286,10 @@ img {
 
   .scaled {
     transform: scale(2);
+  }
+
+  .slides {
+    margin: 50% auto;
   }
 }
 
@@ -340,6 +347,10 @@ img {
     transform: scale(1.5);
     transform-origin: center;
   }
+
+  .slides {
+    margin-top: 150%;
+  }
 }
 
 @media only screen and (max-width: 505px) {
@@ -383,6 +394,10 @@ img {
 
   .banner {
     margin: 20px 0;
+  }
+
+  .slides {
+    margin-top: 250%;
   }
 }
 
