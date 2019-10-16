@@ -46,12 +46,16 @@
 
     initSlider.addEventListener("click", function() {
       slider.classList.remove("hide");
-      setInterval(showAuto, 3000);
+      let timerId = setInterval(showAuto, 3000);
+
+      slider.addEventListener("click", () => {
+        slider.classList.add("hide");
+        clearInterval(timerId);
+      });
     });
 
     function showAuto() {
       slides.forEach(slide => slide.classList.toggle("showSlide"));
     }
-    slider.addEventListener("click", () => slider.classList.add("hide"));
   }
 })();
