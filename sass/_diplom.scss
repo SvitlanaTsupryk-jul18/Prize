@@ -163,7 +163,10 @@
 
 .slides {
   max-width: 70%;
-  margin: 20% auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
 
   img {
@@ -177,7 +180,7 @@ img {
 
 /* Slideshow container */
 .slides-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -287,10 +290,6 @@ img {
   .scaled {
     transform: scale(2);
   }
-
-  .slides {
-    margin: 50% auto;
-  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -347,10 +346,6 @@ img {
     transform: scale(1.5);
     transform-origin: center;
   }
-
-  .slides {
-    margin-top: 150%;
-  }
 }
 
 @media only screen and (max-width: 505px) {
@@ -394,10 +389,6 @@ img {
 
   .banner {
     margin: 20px 0;
-  }
-
-  .slides {
-    margin-top: 250%;
   }
 }
 

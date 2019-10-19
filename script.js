@@ -44,7 +44,7 @@
     let slider = document.querySelector(".slides-container");
     let slides = [...slider.querySelectorAll(".slides")];
 
-    let timerId = null;
+    let timerId;
 
     showSliderEl.addEventListener("click", function() {
       slider.classList.remove("hide");

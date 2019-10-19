@@ -393,7 +393,10 @@ body {
 
 .slides {
   max-width: 70%;
-  margin: 20% auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none; }
   .slides img {
     width: 100%; }
@@ -403,7 +406,7 @@ img {
 
 /* Slideshow container */
 .slides-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -473,9 +476,7 @@ img {
   .leaf::before, .leaf::after {
     transform: scale(1); }
   .scaled {
-    transform: scale(2); }
-  .slides {
-    margin: 50% auto; } }
+    transform: scale(2); } }
 
 @media only screen and (max-width: 700px) {
   .leaf {
@@ -505,9 +506,7 @@ img {
     padding: 10px; }
   .scaled {
     transform: scale(1.5);
-    transform-origin: center; }
-  .slides {
-    margin-top: 150%; } }
+    transform-origin: center; } }
 
 @media only screen and (max-width: 505px) {
   .diplom {
@@ -531,9 +530,7 @@ img {
     width: 40%;
     padding-bottom: 41px; }
   .banner {
-    margin: 20px 0; }
-  .slides {
-    margin-top: 250%; } }
+    margin: 20px 0; } }
 
 @media only screen and (max-width: 405px) {
   .diplom__subtitle {
